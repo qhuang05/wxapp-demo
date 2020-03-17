@@ -1,0 +1,56 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/category/category",
+        "pages/recommend/recommend",
+        "pages/cart/cart",
+        "pages/user/user",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "navigationBarTitleText": "wxapp-demo",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/assets/images/home.png",
+                "selectedIconPath": "/assets/images/home-selected.png"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类",
+                "iconPath": "/assets/images/category.png",
+                "selectedIconPath": "/assets/images/category-selected.png"
+            },
+            {
+                "pagePath": "pages/recommend/recommend",
+                "text": "今日推荐",
+                "iconPath": "/assets/images/recommend.png",
+                "selectedIconPath": "/assets/images/recommend-selected.png"
+            },
+            {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "/assets/images/cart.png",
+                "selectedIconPath": "/assets/images/cart-selected.png"
+            },
+            {
+                "pagePath": "pages/user/user",
+                "text": "我的",
+                "iconPath": "/assets/images/user.png",
+                "selectedIconPath": "/assets/images/user-selected.png"
+            }
+        ],
+        "color": "#000",
+        "selectedColor": "#FF3C07"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
