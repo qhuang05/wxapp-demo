@@ -1,13 +1,30 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- <view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+</view>
+<view>
+    <text bindtap="showEnv">this is a test</text>
+</view> -->
+<!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
+    <view>test content</view>
+</mp-dialog> -->
+<view>
+    <!-- <view style="height:2000rpx;background:#eee">blank content</view> -->
+    <!-- <view style="height:3000rpx;background:#ccc" id="tt2">blank content 2</view> -->
+    <button bindtap="gotoTop">toTop</button>
+    <button bindtap="fileUpload">选择图片</button>
+    <button bindtap="clickHandler">click me</button>
 </view>

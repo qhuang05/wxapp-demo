@@ -1,11 +1,47 @@
-/**app.wxss**/
-/* .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-}  */
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
 
+.flex{
+    display: flex;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-x-center{
+    justify-content: center;
+}
+.flex-y-center{
+    align-items: center;
+}
+.flex-x-full{
+    justify-content: space-between;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-icenter{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-l{
+    text-align: left;
+}
+.text-r{
+    text-align: right;
+}
+.text-c{
+    text-align: center
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    display: block;
+    content: '\200B';
+    height: 0;
+    clear:both;
+}

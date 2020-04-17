@@ -1,12 +1,10 @@
 {
     "pages": [
-        "pages/home/home",
+        "pages/index/index",
         "pages/category/category",
         "pages/recommend/recommend",
         "pages/cart/cart",
-        "pages/user/user",
-        "pages/index/index",
-        "pages/logs/logs"
+        "pages/user/user"
     ],
     "window": {
         "navigationBarTitleText": "wxapp-demo",
@@ -18,7 +16,7 @@
     "tabBar": {
         "list": [
             {
-                "pagePath": "pages/home/home",
+                "pagePath": "pages/index/index",
                 "text": "首页",
                 "iconPath": "/assets/images/home.png",
                 "selectedIconPath": "/assets/images/home-selected.png"
@@ -52,5 +50,6 @@
         "selectedColor": "#FF3C07"
     },
     "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "restartStrategy": "homePageAndLatestPage"
 }
