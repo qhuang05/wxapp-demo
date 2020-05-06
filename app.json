@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/movies/movies",
         "pages/index/index",
         "pages/category/category",
         "pages/recommend/recommend",

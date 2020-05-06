@@ -28,3 +28,7 @@
     <button bindtap="fileUpload">选择图片</button>
     <button bindtap="clickHandler">click me</button>
 </view>
+<view wx:for="{{[1,2,3]}}">
+  {{item}}
+</view>
+<button open-type="contact" type="primary">客服</button>

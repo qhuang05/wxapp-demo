@@ -1,0 +1,11 @@
+.movie-item{
+    width: calc((100% - 20rpx)/2);
+    margin-bottom: 20rpx;
+}
+.movie-item:nth-child(odd){
+    margin-right: 20rpx;
+}
+.movie-item image{
+    width:100%;
+    height: 400rpx;
+}
