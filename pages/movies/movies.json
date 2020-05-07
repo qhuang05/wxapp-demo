@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+      "mp-loading": "../../miniprogram_npm/weui-miniprogram/loading/loading"
+  },
   "onReachBottomDistance": 100,
-  "enablePullDownRefresh": false
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "电影速递"
 }

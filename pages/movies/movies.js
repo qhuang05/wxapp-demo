@@ -46,7 +46,15 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function () {
-        
+        wx.showNavigationBarLoading();
+        this.setData({
+            page: 1,
+            list: []
+        });
+        this.getList(true, ()=>{
+            wx.hideNavigationBarLoading();
+            wx.stopPullDownRefresh();
+        });
     },
 
     /**
@@ -65,21 +73,31 @@ Page({
 
     },
 
-    getList(){
+    getList(isRefresh, callback){
         let {page, perPage} = this.data;
-        this.setData({loading:true});
+        if(!isRefresh){
+            this.setData({loading:true});
+        }
         // wx.request({
         //     url: '',
-        //     success: res => {
-
-        //     }
+        //     success: (res) => {}
         // })
         setTimeout(()=>{
             const newData = [...Movies];
             this.setData({
                 loading: false,
                 list: [...this.data.list, ...newData]
-            })
+            });
+            if(callback){
+                callback();
+            }
         }, 1000);
+    },
+
+    checkDetail(event){
+        let id = event.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: `/pages/movies_detail/detail?id=${id}`,
+        })
     }
 })

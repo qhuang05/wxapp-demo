@@ -1,0 +1,30 @@
+<view class="container" style="display:none;">
+  <view>
+     <video src="{{movie.src}}" initial-time="0" conrtols="true" poster="hlpt"></video> 
+  </view>
+  <view class="title">
+    <text>{{movie.title}} <text>{{movie.rate}}</text></text>
+  </view>
+  <view class="type">
+    <text>{{movie.type}}</text>
+  </view>
+  <view class="description">
+    <text>{{movie.description}}</text>
+  </view>
+</view>
+
+<view class="container">
+    <video src="{{movie.src}}"></video>
+    <view class="title">
+        标题： {{movie.title}}
+    </view>
+    <view class="type">
+        类型：{{movie.type}}
+    </view>
+    <view class="rate">
+        评分： {{movie.rate}}
+    </view>
+    <view class="desc">
+        剧情介绍：{{movie.info}}
+    </view>
+</view>

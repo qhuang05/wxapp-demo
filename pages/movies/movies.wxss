@@ -9,3 +9,7 @@
     width:100%;
     height: 400rpx;
 }
+.loading{
+    text-align: center;
+    padding: 20rpx 0;
+}

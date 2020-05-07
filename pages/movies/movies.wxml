@@ -5,8 +5,8 @@
     lower-threshold="60"
 >
     <view class="list-wrap flex flex-wrap">
-        <view class="movie-item" wx:for="{{list}}" wx:key="id" wx:for-item="movie">
-            <image src="{{movie.src}}" mode="aspectFill"></image>
+        <view class="movie-item" wx:for="{{list}}" wx:key="id" wx:for-item="movie" data-id="{{movie.id}}" bindtap="checkDetail">
+            <image src="{{movie.src}}" mode="aspectFill" lazy-load="true" show-menu-by-longpress></image>
             <view class="title">
                 <text>{{movie.title}}</text>
                 <text class="rate">(评分:{{movie.rate}})</text>
@@ -16,7 +16,7 @@
             </view>
         </view>
     </view>
-    <view class="loading text-c" wx:if="{{loading}}">
-        Loading...
+    <view class="loading" wx:if="{{loading}}">
+        <mp-loading type="circle"></mp-loading>
     </view>
 </scroll-view>
