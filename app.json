@@ -1,12 +1,12 @@
 {
     "pages": [
-        "pages/movies_detail/detail",
-        "pages/movies/movies",
         "pages/index/index",
         "pages/category/category",
         "pages/recommend/recommend",
         "pages/cart/cart",
-        "pages/user/user"
+        "pages/user/user",
+        "pages/movies/movies",
+        "pages/movies_detail/detail"
     ],
     "window": {
         "navigationBarTitleText": "wxapp-demo",
@@ -53,5 +53,10 @@
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json",
-    "restartStrategy": "homePageAndLatestPage"
+    "restartStrategy": "homePageAndLatestPage",
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    }
 }

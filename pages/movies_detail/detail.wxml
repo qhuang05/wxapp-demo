@@ -1,18 +1,3 @@
-<view class="container" style="display:none;">
-  <view>
-     <video src="{{movie.src}}" initial-time="0" conrtols="true" poster="hlpt"></video> 
-  </view>
-  <view class="title">
-    <text>{{movie.title}} <text>{{movie.rate}}</text></text>
-  </view>
-  <view class="type">
-    <text>{{movie.type}}</text>
-  </view>
-  <view class="description">
-    <text>{{movie.description}}</text>
-  </view>
-</view>
-
 <view class="container">
     <video src="{{movie.src}}"></video>
     <view class="title">
@@ -25,6 +10,9 @@
         评分： {{movie.rate}}
     </view>
     <view class="desc">
-        剧情介绍：{{movie.info}}
+        剧情介绍：{{movie.desc}}
     </view>
+</view>
+<view>
+    
 </view>

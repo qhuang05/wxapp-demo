@@ -11,7 +11,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        movie: movieInfo
+        movie: {}
     },
 
     /**
@@ -19,6 +19,8 @@ Page({
      */
     onLoad: function (options) {
         console.log(options)
+        const {id} = options;
+        this.getMovieInfo(id)
     },
 
     /**
@@ -68,5 +70,16 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    getMovieInfo(id){
+        wx.showLoading();
+        // wx.request
+        setTimeout(()=>{
+            this.setData({
+                movie: Object.assign({}, movieInfo)
+            });
+            wx.hideLoading();
+        }, 1000);
     }
 })

@@ -1,34 +1,35 @@
-<!-- <view class="container">
-  <view class="page-body">
-    <view class="page-section page-section-spacing swiper">
-      <swiper 
-        indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" 
-        interval="{{interval}}" 
-        duration="{{duration}}">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <view class="swiper-item {{item}}"></view>
-          </swiper-item>
+<view class="container">
+    <!-- swiper轮播 -->
+    <swiper 
+        indicator-dots="true"
+        autoplay="true"
+        interval="2000" 
+        duration="500"
+        id="banner"
+    >
+        <block wx:for="{{banners}}" wx:key="*this">
+            <swiper-item>
+                <view class="swiper-item" style="background:{{item.bgcolor}}">{{item.txt}}</view>
+            </swiper-item>
         </block>
-      </swiper>
+    </swiper>
+    <!-- 页面跳转 -->
+    <view class="text-c" style="margin:10rpx 0;"> 
+        <text class="custom-btn" style="margin-right:10rpx;" bindtap="toCartPage">购物车</text>
+        <text class="custom-btn" bindtap="toMoviePage">电影速递</text>
     </view>
-  </view>
+    <!-- 返回顶部 -->
+    <text class="totop-btn" bindtap="toTop">返回\n顶部</text>
+    <!-- button按钮 -->
+    <button open-type="contact" type="primary">客服</button>
+    <button type="default" bindtap="fileUpload">上传图片</button>
+    <view class="file-box">{{fileInfo}}</view>
+    <button type="default" bindtap="codeScan">扫一扫</button>
+    <view class="code-box">{{codeInfo}}</view>
+    <button type="default" bindtap="addressChoose">地址选择</button>
+    <view class="address-box">{{addressInfo}}</view>
+    <button type="default" bindtap="locationFetch">获取地理位置</button>
 </view>
-<view>
-    <text bindtap="showEnv">this is a test</text>
-</view> -->
 <!-- <mp-dialog title="test" show="{{true}}" bindbuttontap="tapDialogButton" buttons="{{[{text: '取消'}, {text: '确认'}]}}">
     <view>test content</view>
 </mp-dialog> -->
-<view>
-    <!-- <view style="height:2000rpx;background:#eee">blank content</view> -->
-    <!-- <view style="height:3000rpx;background:#ccc" id="tt2">blank content 2</view> -->
-    <button bindtap="gotoTop">toTop</button>
-    <button bindtap="fileUpload">选择图片</button>
-    <button bindtap="clickHandler">click me</button>
-</view>
-<view wx:for="{{[1,2,3]}}">
-  {{item}}
-</view>
-<button open-type="contact" type="primary">客服</button>
