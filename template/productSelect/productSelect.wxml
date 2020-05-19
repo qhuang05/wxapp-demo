@@ -1,0 +1,10 @@
+<template name="productSelect">
+    <view class="mask" style="display: {{hidden ? 'none' : 'block'}}" bindtap="hideProduct"></view>
+    <view class="product-select {{hidden ? '' : 'active'}}" >
+        <view class="content">
+            <view class="text-c">产品详情</view>
+            {{detail.name}}
+            <button bindtap="tplClickHandler">click me(模板中的点击事件测试)</button>
+        </view>       
+    </view>
+</template>

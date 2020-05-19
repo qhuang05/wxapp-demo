@@ -19,7 +19,7 @@ Page({
      */
     onLoad: function (options) {
         console.log(options)
-        const {id} = options;
+        const { id } = options;
         this.getMovieInfo(id)
     },
 
@@ -72,10 +72,10 @@ Page({
 
     },
 
-    getMovieInfo(id){
+    getMovieInfo(id) {
         wx.showLoading();
         // wx.request
-        setTimeout(()=>{
+        setTimeout(() => {
             this.setData({
                 movie: Object.assign({}, movieInfo)
             });

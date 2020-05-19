@@ -1,4 +1,4 @@
-const Movies = require('../../data/movies.js');
+const Movies = require('../../data/movie.js');
 Page({
     data: {
         loading: false,
@@ -94,10 +94,10 @@ Page({
         }, 1000);
     },
 
-    checkDetail(event){
+    showDetail(event){
         let id = event.currentTarget.dataset.id;
         wx.navigateTo({
-            url: `/pages/movies_detail/detail?id=${id}`,
+            url: `/pages/movieDetail/detail?id=${id}`,
         })
     }
 })

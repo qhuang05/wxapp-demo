@@ -5,7 +5,7 @@
     lower-threshold="60"
 >
     <view class="list-wrap flex flex-wrap">
-        <view class="movie-item" wx:for="{{list}}" wx:key="id" wx:for-item="movie" data-id="{{movie.id}}" bindtap="checkDetail">
+        <view class="movie-item" wx:for="{{list}}" wx:key="id" wx:for-item="movie" data-id="{{movie.id}}" bindtap="showDetail">
             <image src="{{movie.src}}" mode="aspectFill" lazy-load="true" show-menu-by-longpress></image>
             <view class="title">
                 <text>{{movie.title}}</text>

@@ -1,0 +1,5 @@
+<view>
+    <button bindtap="chooseProduct">选择产品</button>
+</view>
+<import src="/template/productSelect/productSelect.wxml" />
+<template is="productSelect" data="{{...product}}" />

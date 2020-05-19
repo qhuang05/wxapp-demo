@@ -1,12 +1,13 @@
 {
     "pages": [
+        "pages/product/list",
+        "pages/movie/list",
+        "pages/movieDetail/detail",
         "pages/index/index",
         "pages/category/category",
         "pages/recommend/recommend",
         "pages/cart/cart",
-        "pages/user/user",
-        "pages/movies/movies",
-        "pages/movies_detail/detail"
+        "pages/user/user"
     ],
     "window": {
         "navigationBarTitleText": "wxapp-demo",
