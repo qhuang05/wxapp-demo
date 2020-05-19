@@ -1,6 +1,11 @@
-var foo = {
-    msg: 'abc'
+var bar = function(a,b) {
+  return a+b
 }
+var dong = {
+  msg: 'hello wxapp'
+}
+
 module.exports = {
-    foo: foo
+    bar: bar,
+    dong: dong
 }
