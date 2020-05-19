@@ -1,0 +1,6 @@
+var foo = {
+    msg: 'abc'
+}
+module.exports = {
+    foo: foo
+}

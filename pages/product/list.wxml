@@ -1,5 +1,14 @@
+
 <view>
     <button bindtap="chooseProduct">选择产品</button>
+    <view>
+        wxs使用测试：<text>{{foo.foo.msg}}</text>
+    </view>
 </view>
 <import src="/template/productSelect/productSelect.wxml" />
 <template is="productSelect" data="{{...product}}" />
+
+<!-- <wxs module="foo">
+    module.exports = { msg: 'abc' }
+</wxs> -->
+<include src="/utils/foo.wxs" module="foo" />

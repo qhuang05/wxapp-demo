@@ -16,7 +16,8 @@
     <!-- 页面跳转 -->
     <view class="text-c" style="margin:10rpx 0;"> 
         <text class="custom-btn" style="margin-right:10rpx;" bindtap="toCartPage">购物车</text>
-        <text class="custom-btn" bindtap="toMoviePage">电影速递</text>
+        <text class="custom-btn" style="margin-right:10rpx;" bindtap="toMoviePage">电影速递</text>
+        <text class="custom-btn" bindtap="toProductPage">产品</text>
     </view>
     <!-- 返回顶部 -->
     <text class="totop-btn" bindtap="toTop">返回\n顶部</text>

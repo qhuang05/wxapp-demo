@@ -27,7 +27,12 @@ Page({
     // 页面跳转
     toMoviePage(){
         wx.navigateTo({
-            url: '/pages/movies/movies',
+            url: '/pages/movie/list',
+        })
+    },
+    toProductPage(){
+        wx.navigateTo({
+            url: '/pages/product/list',
         })
     },
     // 返回顶部
