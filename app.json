@@ -1,9 +1,9 @@
 {
     "pages": [
-        "pages/category/index",
+        "pages/recommend/index",
         "pages/product/list",  
         "pages/index/index",
-        "pages/recommend/recommend",
+        "pages/category/index",
         "pages/cart/cart",
         "pages/user/user",
         "pages/movie/list",
@@ -33,7 +33,7 @@
                 "selectedIconPath": "/assets/images/category-selected.png"
             },
             {
-                "pagePath": "pages/recommend/recommend",
+                "pagePath": "pages/recommend/index",
                 "text": "今日推荐",
                 "iconPath": "/assets/images/recommend.png",
                 "selectedIconPath": "/assets/images/recommend-selected.png"

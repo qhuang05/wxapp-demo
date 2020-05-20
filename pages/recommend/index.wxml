@@ -1,0 +1,22 @@
+<view>
+    <view class="headcont">顶部内容</view>
+    <mp-sticky>
+        <view class="fixed-menu">
+            <mp-tabs 
+                tabs="{{tabs}}" 
+                activeTab="{{activeTab}}" 
+                swiperClass="weui-tabs-swiper"
+                bindtabclick="onTabCLick"
+                bindchange="onChange"
+                activeClass="tab-bar-title__selected"
+            >
+                <block wx:for="{{tabs}}" wx:key="title">
+                    <view class="tab-content" slot="tab-content-{{index}}" > {{item.title}} </view>
+                </block>
+            </mp-tabs>
+        </view>
+    </mp-sticky>
+    <view style="height: 2000rpx;">
+        CONTENT....
+    </view>
+</view>
