@@ -1,13 +1,13 @@
 {
     "pages": [
+        "pages/category/index",
+        "pages/product/list",  
         "pages/index/index",
-        "pages/category/category",
         "pages/recommend/recommend",
         "pages/cart/cart",
         "pages/user/user",
         "pages/movie/list",
-        "pages/movieDetail/detail",
-        "pages/product/list",
+        "pages/movieDetail/detail",       
         "pages/indexBak/index",
         "pages/logsBak/index"
     ],
@@ -27,7 +27,7 @@
                 "selectedIconPath": "/assets/images/home-selected.png"
             },
             {
-                "pagePath": "pages/category/category",
+                "pagePath": "pages/category/index",
                 "text": "分类",
                 "iconPath": "/assets/images/category.png",
                 "selectedIconPath": "/assets/images/category-selected.png"

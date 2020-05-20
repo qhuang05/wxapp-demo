@@ -4,6 +4,10 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "@miniprogram-component-plus/sticky": "^1.0.0",
+    "@miniprogram-component-plus/tabs": "^1.0.0",
+    "@miniprogram-component-plus/vtabs": "^1.0.0",
+    "@miniprogram-component-plus/vtabs-content": "^1.0.0",
     "weui-miniprogram": "^0.2.2"
   },
   "devDependencies": {},

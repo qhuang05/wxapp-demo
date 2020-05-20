@@ -1,11 +1,22 @@
-var bar = function(a,b) {
-  return a+b
+var formatTime = function(date) {
+    return getDate(date);
+}
+
+var formatNumber = function(n) {
+    n = n.toString()
+    return n[1] ? n : '0' + n
+}
+
+var bar = function (a, b) {
+    return a + b
 }
 var dong = {
-  msg: 'hello wxapp'
+    msg: 'hello wxapp'
 }
 
 module.exports = {
+    formatTime: formatTime,
+    formatNumber: formatNumber,
     bar: bar,
-    dong: dong
+    dong: dong,
 }

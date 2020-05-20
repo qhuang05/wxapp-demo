@@ -8,6 +8,7 @@
         2、wxs使用举例：
         <view>{{foo.msg}}</view>
         <view>{{foo2.dong.msg}}, {{foo2.bar(10,20)}}</view>
+        <view>{{foo2.formatTime(time2)}}</view>
     </view>
     <view class="part">
         3、模块化使用：
