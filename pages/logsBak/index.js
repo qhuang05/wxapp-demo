@@ -1,25 +1,18 @@
-const utils = require('../../utils/util.js')
+// pages/logsBak/index.js
 Page({
+
     /**
      * 页面的初始数据
      */
     data: {
-        product: {
-            hidden: true,
-            detail: {
-                name: '产品名称：T恤'
-            }
-        },
-        time: '2020-06-06 20:00:00'
+
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.setData({
-            time: utils.formatTime(new Date(this.data.time))
-        })
+
     },
 
     /**
@@ -69,21 +62,5 @@ Page({
      */
     onShareAppMessage: function () {
 
-    },
-
-    chooseProduct(){
-       this.setData({
-           'product.hidden': false
-       })
-    },
-    hideProduct(){
-        this.setData({
-            'product.hidden': true
-        })
-    },
-    tplClickHandler(){
-        this.setData({
-            'product.detail.name': '帽子'
-        })
     }
 })
