@@ -1,4 +1,4 @@
-// pages/recommend/index.js
+const Products = require('../../data/product.js');
 Page({
 
     /**
@@ -7,15 +7,25 @@ Page({
     data: {
         tabs: [],
         activeTab: 0,
+        list: [],
+        loading: false
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        const titles = ['首页', '外卖', '商超生鲜', '购物', '美食饮品', '生活服务', '休闲娱乐', '出行']
-        const tabs = titles.map(item => ({ title: item }))
-        this.setData({ tabs })
+        const tabs = [
+            {id: 1001, title: '首页'},
+            {id: 1002, title: '外卖'},
+            {id: 1003, title: '商超生鲜'},
+            {id: 1004, title: '美食饮品'},
+            {id: 1005, title: '生活服务'},
+            {id: 1006, title: '休闲娱乐'},
+            {id: 1007, title: '出行'},
+        ];
+        this.setData({ tabs });
+        this.getList(this.data.activeTab, true);
     },
 
     /**
@@ -57,7 +67,8 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-
+        console.log('reach bottom...');
+        this.getList(this.data.activeTab, false);
     },
 
     /**
@@ -67,13 +78,29 @@ Page({
 
     },
 
-    onTabCLick(e) {
+    onTabClick(e) {
         const index = e.detail.index
         this.setData({ activeTab: index })
     },
 
     onChange(e) {
         const index = e.detail.index
-        this.setData({ activeTab: index })
+        this.setData({ activeTab: index });
+        this.getList(this.data.activeTab, true);
+    },
+
+    getList(tabIndex, isReload){
+        if(isReload){
+            this.setData({ list: [] })
+        }
+        this.setData({ loading: true });
+        let length = this.data.list.length;
+        setTimeout(()=>{
+           this.setData({
+               [`list[${length}]`]: [...Products],
+               loading: false
+           });
+           console.log(this.data.list)
+        }, 1000);
     }
 })
