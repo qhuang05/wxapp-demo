@@ -1,2 +1,17 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+        <view class="avatar">
+            <image bindtap="showLogs" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      <view class="text-l">
+        <view>模拟后台登录获取的用户ID信息：</view>
+        <view>openId: {{userInfo.openId}}</view>
+        <view>sessionKey: {{userInfo.sessionKey}}</view>
+        <view>unionId: {{userInfo.unionId}}</view>
+      </view>
+    </block>
+  </view>
+</view>

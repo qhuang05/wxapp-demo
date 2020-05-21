@@ -1,7 +1,7 @@
 <view>
-    <view class="headcont">顶部内容...</view>
+    <view class="head-section" id="header">顶部内容...</view>
     <mp-sticky>
-        <view class="fixed-menu">
+        <view class="fixed-tabs" id="fixedTabs">
             <mp-tabs 
                 tabs="{{tabs}}" 
                 activeTab="{{activeTab}}" 
@@ -19,7 +19,7 @@
             </mp-tabs>
         </view>
     </mp-sticky>
-    <view class="product-list flex flex-wrap">
+    <view class="product-list flex flex-wrap" id="productList" style="min-height1: calc(100vh - {{minHeight}})">
         <block wx:for="{{list}}" wx:for-item="listItem" wx:for-index="listIndex" wx:key="item">
             <view wx:for="{{listItem}}" wx:key="{{item}}" class="product-item">
                 <view class="img-box flex-icenter">

@@ -1,15 +1,15 @@
 {
     "pages": [
         "pages/recommend/index",
+        "pages/user/user",
         "pages/product/list",  
         "pages/index/index",
         "pages/category/index",
         "pages/cart/cart",
-        "pages/user/user",
         "pages/movie/list",
         "pages/movieDetail/detail",       
         "pages/indexBak/index",
-        "pages/logsBak/index"
+        "pages/logsBak/logs"
     ],
     "window": {
         "navigationBarTitleText": "wxapp-demo",

@@ -1,14 +1,10 @@
-.headcont{
+.head-section{
     height: 500rpx;
     text-align: center;
     background:wheat;
 }
-.fixed-menu{
+.fixed-tabs{
     width:100%;
-    border-bottom:1px solid #ccc;
-    background: greenyellow;
-    color:#fff;
-    z-index:999;
 }
 .weui-sticky__fixed{
     width:100%;
@@ -36,6 +32,7 @@ swiper{
 
 .product-list{
     margin:40rpx;
+    /* min-height: calc(100vh - 254rpx); */
 }
 .product-item{
     width: calc((100% - 40rpx)/2);

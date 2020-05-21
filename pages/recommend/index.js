@@ -8,7 +8,9 @@ Page({
         tabs: [],
         activeTab: 0,
         list: [],
-        loading: false
+        loading: false,
+        minHeight:0,
+        isInit: true,
     },
 
     /**
@@ -67,7 +69,6 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom: function () {
-        console.log('reach bottom...');
         this.getList(this.data.activeTab, false);
     },
 
@@ -87,20 +88,38 @@ Page({
         const index = e.detail.index
         this.setData({ activeTab: index });
         this.getList(this.data.activeTab, true);
+        
+        // if(this.data.minHeight==0){
+        //     const self = this;
+        //     const query = wx.createSelectorQuery();
+        //     query.select('#header').boundingClientRect();
+        //     query.select('#fixedTabs').boundingClientRect();
+        //     query.selectViewport().scrollOffset();
+        //     query.exec(function (res) {
+        //         console.log(res, res[0].height + res[1].height);
+        //         self.setData({ minHeight: (res[0].height + res[1].height - 50)+'px' });
+        //     });
+        // }
     },
 
     getList(tabIndex, isReload){
         if(isReload){
-            this.setData({ list: [] })
+            this.setData({ list: [] });
         }
         this.setData({ loading: true });
         let length = this.data.list.length;
         setTimeout(()=>{
-           this.setData({
+            this.setData({
                [`list[${length}]`]: [...Products],
-               loading: false
-           });
-           console.log(this.data.list)
+               loading: false,
+            });
+            if(isReload && !this.data.isInit){
+                // wx.pageScrollTo({
+                //     scrollTop: 240,
+                //     duration: 0
+                // });
+            }
+            this.setData({ isInit: false })
         }, 1000);
     }
 })
