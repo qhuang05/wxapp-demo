@@ -32,7 +32,7 @@ swiper{
 
 .product-list{
     margin:40rpx;
-    /* min-height: calc(100vh - 254rpx); */
+    /* min-height: calc(100vh - 240rpx); */
 }
 .product-item{
     width: calc((100% - 40rpx)/2);
@@ -60,4 +60,12 @@ swiper{
 .loading{
     text-align: center;
     padding: 20rpx 0;
+}
+
+.menu-list{
+  display: flex;
+  height: 120rpx;
+}
+.menu-list>view{
+  padding: 0 40rpx;
 }

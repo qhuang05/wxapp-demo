@@ -19,7 +19,7 @@
             </mp-tabs>
         </view>
     </mp-sticky>
-    <view class="product-list flex flex-wrap" id="productList" style="min-height1: calc(100vh - {{minHeight}})">
+    <view class="product-list flex flex-wrap" id="productList" style="min-height: calc(100vh - {{minHeight}}rpx">
         <block wx:for="{{list}}" wx:for-item="listItem" wx:for-index="listIndex" wx:key="item">
             <view wx:for="{{listItem}}" wx:key="{{item}}" class="product-item">
                 <view class="img-box flex-icenter">

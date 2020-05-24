@@ -9,8 +9,8 @@ Page({
         activeTab: 0,
         list: [],
         loading: false,
-        minHeight:0,
-        isInit: true,
+        minHeight: 0,
+        scrollerTop:0,
     },
 
     /**
@@ -88,18 +88,19 @@ Page({
         const index = e.detail.index
         this.setData({ activeTab: index });
         this.getList(this.data.activeTab, true);
-        
-        // if(this.data.minHeight==0){
-        //     const self = this;
-        //     const query = wx.createSelectorQuery();
-        //     query.select('#header').boundingClientRect();
-        //     query.select('#fixedTabs').boundingClientRect();
-        //     query.selectViewport().scrollOffset();
-        //     query.exec(function (res) {
-        //         console.log(res, res[0].height + res[1].height);
-        //         self.setData({ minHeight: (res[0].height + res[1].height - 50)+'px' });
-        //     });
-        // }
+
+        if(this.data.minHeight == 0){
+          const self = this;
+          const query = wx.createSelectorQuery();
+          query.select('#header').boundingClientRect();
+          query.exec(function(res){
+            self.setData({ 'minHeight': res[0].height });
+            // wx.pageScrollTo({
+            //   scrollTop: 500,
+            //   duration: 0
+            // });
+          })
+        }
     },
 
     getList(tabIndex, isReload){
@@ -112,14 +113,7 @@ Page({
             this.setData({
                [`list[${length}]`]: [...Products],
                loading: false,
-            });
-            if(isReload && !this.data.isInit){
-                // wx.pageScrollTo({
-                //     scrollTop: 240,
-                //     duration: 0
-                // });
-            }
-            this.setData({ isInit: false })
+            });         
         }, 1000);
     }
 })
