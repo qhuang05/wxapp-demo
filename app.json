@@ -1,13 +1,13 @@
 {
     "pages": [
-        "pages/recommend/index",
-        "pages/user/user",
-        "pages/product/list",  
         "pages/index/index",
         "pages/category/index",
+        "pages/recommend/index",
         "pages/cart/cart",
+        "pages/user/user",
         "pages/movie/list",
         "pages/movieDetail/detail",       
+        "pages/product/list",  
         "pages/indexBak/index",
         "pages/logsBak/logs"
     ],
