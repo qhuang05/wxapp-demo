@@ -11,7 +11,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    // https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html
+    // 服务器域名配置
+    wx.request({
+      url: 'http://localhost:3000/user/login',
+      data: { username: 'admin' },
+      success: function (res) {
+        console.log('wx request: ', res)
+      }
+    })
   },
 
   /**
